@@ -1,3 +1,5 @@
 *.log
 bin
 .vagrant
+*.o
+*.so

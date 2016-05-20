@@ -1,8 +1,7 @@
-#include <stdio.h>
-
+#include "hello.h"
 
 int main()
 {
-	printf("Hello, World!\n");
+	hello_message("Dima");
 	return 0;
 }
