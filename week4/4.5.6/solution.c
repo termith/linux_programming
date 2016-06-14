@@ -1,6 +1,12 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "unistd.h"
+#include "signal.h"
+
+void signal_handler(int signo)
+{
+    exit(0);
+}
 
 int main(int argc, char const *argv[])
 {
@@ -37,6 +43,7 @@ int main(int argc, char const *argv[])
         close(STDIN_FILENO);
         close(STDOUT_FILENO);
         close(STDERR_FILENO);
+        signal(SIGURG, signal_handler);
         while (1) {}
     return 0;
 }
